@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS estados (
 	PRIMARY KEY (estado_key)
 );
 
-CREATE TABLE IF NOT EXISTS datas (
+CREATE TABLE IF NOT EXISTS data_investimento (
 	data_key INT,
 	ano integer NOT NULL,
 	PRIMARY KEY (data_key)
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS investimentos (
 	FOREIGN KEY (estado)
 		REFERENCES estados (estado_key),
 	FOREIGN KEY ("data")
-		REFERENCES datas (data_key),
+		REFERENCES data_investimento (data_key),
 	FOREIGN KEY (subfuncao)
 		REFERENCES subfuncoes (subfuncoes_key)
 );
